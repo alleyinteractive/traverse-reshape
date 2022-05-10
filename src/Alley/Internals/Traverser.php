@@ -92,7 +92,7 @@ final class Traverser
     private function run()
     {
         if (\is_array($this->path)) {
-            $this->result = \array_reduce(\array_keys($this->path), [$this, 'reducePaths'], []);
+            $this->result = array_reduce(array_keys($this->path), [$this, 'reducePaths'], []);
             return;
         }
 
@@ -108,7 +108,7 @@ final class Traverser
          * - `foo` becomes `[ 'foo' ]`
          * - `foo.bar` becomes `[ 'foo', 'bar' ]` if the delimiter is `.`
          */
-        $path_pieces = \explode($this->delimiter, $this->path);
+        $path_pieces = explode($this->delimiter, $this->path);
 
         /*
          * Take the first element from the newly generated array of path pieces,
@@ -116,7 +116,7 @@ final class Traverser
          * data supplied to this instance. If there is no matching array key or
          * object property in the source data, stop.
          */
-        $key = \array_shift($path_pieces);
+        $key = array_shift($path_pieces);
 
         if (\is_array($this->source) || $this->source instanceof \ArrayAccess) {
             if (!isset($this->source[$key])) {
@@ -150,7 +150,7 @@ final class Traverser
          * remaining path pieces and the delimiter to create a new string path.
          * This process repeats until there are no more path pieces.
          */
-        $this->result = self::createAndGet($this->result, \implode($this->delimiter, $path_pieces), $this->delimiter);
+        $this->result = self::createAndGet($this->result, implode($this->delimiter, $path_pieces), $this->delimiter);
     }
 
     /**
@@ -168,7 +168,7 @@ final class Traverser
          * If the key is a non-numeric string, traverse the value in the
          * original source at the path specified by the key.
          */
-        if (!\is_numeric($key)) {
+        if (!is_numeric($key)) {
             $source = self::createAndGet($source, $key, $this->delimiter);
         }
 

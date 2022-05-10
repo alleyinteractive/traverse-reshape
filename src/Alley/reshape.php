@@ -31,14 +31,14 @@ function reshape($source, $shape, string $delimiter = '.')
      * If a string is included in $shape without a string key, use the last segment
      * of the string as the reshaped key and the full string as the path.
      */
-    $final = \array_reduce(
-        \array_keys((array) $shape),
+    $final = array_reduce(
+        array_keys((array) $shape),
         function ($carry, $key) use ($shape, $delimiter) {
             $path = traverse($shape, (string) $key);
 
             if (\is_int($key)) {
-                $key_pieces = \explode($delimiter, $path);
-                $key = \array_pop($key_pieces);
+                $key_pieces = explode($delimiter, $path);
+                $key = array_pop($key_pieces);
             }
 
             // Later keys replace earlier ones but remain in their given position in the shape.
@@ -50,7 +50,7 @@ function reshape($source, $shape, string $delimiter = '.')
     );
 
     // Create the desired shape now to preserve the order of its keys during the final merge.
-    $out = \array_fill_keys(\array_keys($final), null);
+    $out = array_fill_keys(array_keys($final), null);
 
     // Key-value pairs for values that are strings and can be traversed in bulk.
     $deferred = [];
@@ -65,13 +65,13 @@ function reshape($source, $shape, string $delimiter = '.')
     }
 
     // Merge the remaining keys on top.
-    $out = \array_merge(
+    $out = array_merge(
         $out,
-        \array_combine(
-            \array_keys($deferred),
-            traverse($source, \array_values($deferred), $delimiter)
+        array_combine(
+            array_keys($deferred),
+            traverse($source, array_values($deferred), $delimiter)
         )
     );
 
-    return is_object($shape) ? (object) $out : $out;
+    return \is_object($shape) ? (object) $out : $out;
 }
