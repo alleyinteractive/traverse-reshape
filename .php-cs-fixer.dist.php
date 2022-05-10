@@ -17,7 +17,7 @@ $finder = PhpCsFixer\Finder::create()->in([
 $config = new PhpCsFixer\Config();
 $config->setRules([
     '@PSR12' => true,
-    '@PHP80Migration' => true,
+    '@PHP81Migration' => true,
 
     'native_constant_invocation' => true,
     'native_function_casing' => true,
