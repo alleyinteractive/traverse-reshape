@@ -35,4 +35,4 @@ jobs:
 
       - name: Run PHPUnit
         shell: bash
-        run: composer run phpunit
+        run: composer run-script phpunit
