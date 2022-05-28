@@ -10,8 +10,6 @@ None.
 
 ### Added
 
-- Initial release.
-
 ### Changed
 
 ### Deprecated
