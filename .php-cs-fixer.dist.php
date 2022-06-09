@@ -19,6 +19,7 @@ $config->setRules([
     '@PSR12' => true,
     '@PHP81Migration' => true,
 
+    'final_class' => true,
     'native_constant_invocation' => true,
     'native_function_casing' => true,
     'native_function_invocation' => true,
