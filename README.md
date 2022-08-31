@@ -2,7 +2,17 @@
 
 `traverse()` and `reshape()` are companion functions that safely break down arrays or objects and put them back together in new shapes.
 
-## traverse
+## Installation
+
+Install the latest version with:
+
+```bash
+$ composer require alleyinteractive/traverse-reshape
+```
+
+## Basic usage
+
+### traverse
 
 Traverse an array or an object using a delimiter to find one value or many values.
 
@@ -77,7 +87,7 @@ $req = getRemoteData();
 );
 ```
 
-## reshape
+### reshape
 
 Declare the shape of a new array or object whose values are extracted from a source array or object with `traverse()`.
 
@@ -132,3 +142,13 @@ $original = [
     ]
 */
 ```
+
+## About
+
+### License
+
+[GPL-2.0-or-later](https://github.com/alleyinteractive/traverse-reshape/blob/main/README.md)
+
+### Maintainers
+
+[Alley Interactive](https://github.com/alleyinteractive)
