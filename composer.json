@@ -20,7 +20,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Alley\\Tests\\": "tests/"
+      "Alley\\": "tests/Alley/"
     }
   },
   "config": {
