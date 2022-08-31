@@ -23,7 +23,10 @@
       "Alley\\": "tests/Alley/"
     }
   },
-  "config": {},
+  "config": {
+    "lock": false,
+    "sort-packages": true
+  },
   "require": {
     "php": "^7.4 || ^8.0"
   },
