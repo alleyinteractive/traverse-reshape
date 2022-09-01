@@ -147,7 +147,7 @@ $original = [
 
 ### License
 
-[GPL-2.0-or-later](https://github.com/alleyinteractive/traverse-reshape/blob/main/README.md)
+[GPL-2.0-or-later](https://github.com/alleyinteractive/traverse-reshape/blob/main/LICENSE)
 
 ### Maintainers
 
