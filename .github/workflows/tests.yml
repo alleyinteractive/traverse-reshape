@@ -9,12 +9,9 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.1, 8.0, 7.4]
-        can_fail: [false]
-
+        php: [ 8.1, 8.0, 7.4 ]
+        can_fail: [ false ]
     name: PHP ${{ matrix.php }}
-    env:
-      CACHEDIR: /tmp/test-cache
     steps:
       - name: Check out code
         uses: actions/checkout@v3
@@ -23,15 +20,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          tools: composer:v2
-          coverage: none
 
-      - name: Install Composer dependencies
-        uses: nick-invision/retry@v2
-        with:
-          timeout_minutes: 5
-          max_attempts: 5
-          command: composer install
+      - name: Install composer dependencies
+        uses: ramsey/composer-install@v2
 
       - name: Run PHPUnit
         shell: bash
