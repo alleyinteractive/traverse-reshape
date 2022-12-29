@@ -6,7 +6,7 @@
   "authors": [
     {
       "name": "Alley",
-      "email": "info@alley.co"
+      "email": "info@alley.com"
     }
   ],
   "autoload": {
@@ -27,7 +27,7 @@
     "lock": false
   },
   "require": {
-    "php": "^7.4 || ^8.0"
+    "php": "^8.0"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.8",
