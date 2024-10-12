@@ -58,7 +58,7 @@ final class Traverser
      *
      * @return mixed
      */
-    public function get()
+    public function get(): mixed
     {
         $this->run();
 
