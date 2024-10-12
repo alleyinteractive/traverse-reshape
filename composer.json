@@ -27,7 +27,7 @@
     "lock": false
   },
   "require": {
-    "php": "^8.0"
+    "php": "^8.2"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.8",
