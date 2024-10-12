@@ -25,7 +25,7 @@ namespace Alley;
  * @param string $delimiter Delimiter. Default is a '.'.
  * @return mixed[]|object A new associative array or object from the keys and traversal paths of $shape.
  */
-function reshape(mixed $source, object|array $shape, string $delimiter = '.')
+function reshape(mixed $source, object|array $shape, string $delimiter = '.'): array|object
 {
     /*
      * If a string is included in $shape without a string key, use the last segment
