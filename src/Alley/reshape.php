@@ -16,16 +16,16 @@ namespace Alley;
 /**
  * Reshape an array or object into new keys with values traversed from within the original.
  *
- * @param array|object $source Data source.
- * @param array|object $shape An array or object of the new keys for the data and the paths to traverse in
- *                            the source data to find the new values. Multidimensional values can be created
- *                            by passing a fully-formed shape as a value in the array or object. A string value
- *                            without a named key will use the final segment of the string as the key and the
- *                            full string path as the value.
+ * @param mixed $source Data source.
+ * @param object|string[] $shape An array or object of the new keys for the data and the paths to traverse in
+ *                               the source data to find the new values. Multidimensional values can be created
+ *                               by passing a fully-formed shape as a value in the array or object. A string value
+ *                               without a named key will use the final segment of the string as the key and the
+ *                               full string path as the value.
  * @param string $delimiter Delimiter. Default is a '.'.
- * @return array|object A new associative array or object from the keys and traversal paths of $shape.
+ * @return mixed[]|object A new associative array or object from the keys and traversal paths of $shape.
  */
-function reshape($source, $shape, string $delimiter = '.')
+function reshape(mixed $source, object|array $shape, string $delimiter = '.')
 {
     /*
      * If a string is included in $shape without a string key, use the last segment
@@ -36,7 +36,7 @@ function reshape($source, $shape, string $delimiter = '.')
         function ($carry, $key) use ($shape, $delimiter) {
             $path = traverse($shape, (string) $key);
 
-            if (\is_int($key)) {
+            if (\is_int($key) && strlen($delimiter) > 0 && is_string($path)) {
                 $key_pieces = explode($delimiter, $path);
                 $key = array_pop($key_pieces);
             }

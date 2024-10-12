@@ -16,13 +16,15 @@ namespace Alley;
 /**
  * Pluck one or many values from nested arrays or objects using 'dot' notation.
  *
- * @param array|object $source Data source.
- * @param string|array $path The path or array of paths to values separated by $delimiter.
- *                           Any path in array of paths can itself be an array of paths.
+ * @phpstan-return ($path is array ? mixed[] : mixed)
+ *
+ * @param mixed $source Data source.
+ * @param string|string[]|int|int[] $path The path or array of paths to values separated by $delimiter.
+ *                                        Any path in array of paths can itself be an array of paths.
  * @param string $delimiter Delimiter. Default is a '.'.
  * @return mixed The value or values if found or null.
  */
-function traverse($source, $path, string $delimiter = '.')
+function traverse(mixed $source, string|int|array $path, string $delimiter = '.'): mixed
 {
     return Internals\Traverser::createAndGet($source, $path, $delimiter);
 }
