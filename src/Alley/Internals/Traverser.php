@@ -30,8 +30,8 @@ final class Traverser
     /**
      * Constructor.
      *
-     * @param mixed $source    Data source.
-     * @param string|string[]|int|int[] $path Path or array of paths to data.
+     * @param mixed $source Data source.
+     * @param string|int|mixed[] $path Path or array of paths to data.
      * @param string $delimiter Path delimiter.
      */
     public function __construct(
