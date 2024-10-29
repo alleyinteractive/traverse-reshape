@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Alley\Fixtures;
+namespace Alley\Tests\Fixtures;
 
 /**
  * Implements ArrayAccess using the example internals from https://www.php.net/manual/en/class.arrayaccess.php.

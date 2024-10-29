@@ -1,11 +1,15 @@
+<?xml version="1.0"?>
 <phpunit
-    backupGlobals="false"
-    colors="true"
-    convertErrorsToExceptions="true"
-    convertNoticesToExceptions="true"
-    convertWarningsToExceptions="true"
->
-    <testsuite name="unit">
-        <directory>tests</directory>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  colors="true"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd"
+  cacheDirectory=".phpunit.result.cache">
+  <testsuites>
+    <testsuite name="Feature">
+      <directory>tests/Feature</directory>
     </testsuite>
+    <testsuite name="Unit">
+      <directory>tests/Unit</directory>
+    </testsuite>
+  </testsuites>
 </phpunit>

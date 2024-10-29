@@ -6,6 +6,13 @@ This library adheres to [Semantic Versioning](https://semver.org/) and [Keep a C
 
 Nothing yet.
 
+## 3.0.0
+
+### Changed
+
+- `traverse()` and `reshape()` now declare parameter and return types.
+- The minimum PHP version is now 8.2.
+
 ## 2.0.0
 
 ### Removed

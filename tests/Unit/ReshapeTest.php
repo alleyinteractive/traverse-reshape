@@ -9,9 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Alley;
+namespace Alley\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+
+use function Alley\reshape;
 
 final class ReshapeTest extends TestCase
 {
