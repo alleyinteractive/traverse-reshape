@@ -1,0 +1,6 @@
+parameters:
+	# Level 9 is the highest level
+	level: max
+
+	paths:
+		- src/

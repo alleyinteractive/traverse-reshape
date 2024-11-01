@@ -9,10 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Alley;
+namespace Alley\Tests\Unit;
 
-use Alley\Fixtures\ArrayAccessible;
+use Alley\Tests\Fixtures\ArrayAccessible;
 use PHPUnit\Framework\TestCase;
+
+use function Alley\traverse;
 
 final class TraverseTest extends TestCase
 {

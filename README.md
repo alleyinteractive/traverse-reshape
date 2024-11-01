@@ -7,7 +7,7 @@
 Install the latest version with:
 
 ```bash
-$ composer require alleyinteractive/traverse-reshape
+composer require alleyinteractive/traverse-reshape
 ```
 
 ## Basic usage
